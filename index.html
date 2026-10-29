@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nicolás Hidalgo — Desarrollador Full Stack</title>
 <meta name="description" content="Portfolio de Nicolás Hidalgo Salinas, desarrollador full stack. Angular, React, Firebase y TypeScript.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://nicolashidalgo.es/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nicolashidalgo.es/">
+<meta property="og:title" content="Nicolás Hidalgo — Desarrollador Full Stack">
+<meta property="og:description" content="Aplicaciones web y móviles con Angular, React, Node.js y Firebase. Proyectos, experiencia y contacto.">
+<meta property="og:image" content="https://nicolashidalgo.es/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nicolashidalgo.es/img/og-image.jpg">
+<link rel="preload" as="image" href="img/perfil.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -83,7 +96,7 @@
 
       <div class="hero-photo">
         <div class="photo-frame">
-          <img src="img/perfil.png" alt="Nicolás Hidalgo">
+          <img src="img/perfil.webp" alt="Nicolás Hidalgo" width="720" height="980" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -196,7 +209,7 @@
 
         <article class="project-card project-card-featured reveal">
           <div class="project-img project-img-nido">
-            <img src="img/nido.png" alt="Nido: lista de la compra, historial y preguntas a la casa">
+            <img src="img/nido.webp" width="1000" height="662" loading="lazy" decoding="async" alt="Nido: lista de la compra, historial y preguntas a la casa">
           </div>
           <div class="project-card-body">
             <div class="project-card-head"><h3>Nido</h3><span class="status-pill status-live" data-i18n="proj.status.live">Publicado</span></div>
@@ -208,7 +221,7 @@
 
         <article class="project-card project-card-featured reveal">
           <div class="project-img project-img-noma">
-            <img src="img/noma-card.png" alt="Noma">
+            <img src="img/noma-card.webp" width="1000" height="662" loading="lazy" decoding="async" alt="Noma">
           </div>
           <div class="project-card-body">
             <div class="project-card-head"><h3>Noma</h3><span class="status-pill status-live" data-i18n="proj.status.live">Publicado</span></div>
@@ -220,7 +233,7 @@
 
         <article class="project-card project-card-featured reveal">
           <div class="project-img project-img-epicbox">
-            <img src="img/epicbox-card.png" alt="EpicBox">
+            <img src="img/epicbox-card.webp" width="1000" height="662" loading="lazy" decoding="async" alt="EpicBox">
           </div>
           <div class="project-card-body">
             <div class="project-card-head"><h3>EpicBox</h3><span class="status-pill status-live" data-i18n="proj.status.live">Publicado</span></div>
@@ -232,7 +245,7 @@
 
         <article class="project-card project-card-featured reveal">
           <div class="project-img project-img-cargest">
-            <img src="img/cargest-card.png" alt="CarGest">
+            <img src="img/cargest-card.webp" width="1000" height="662" loading="lazy" decoding="async" alt="CarGest">
           </div>
           <div class="project-card-body">
             <div class="project-card-head"><h3>CarGest</h3><span class="status-pill status-progress" data-i18n="proj.status.progress">Fase final</span></div>
@@ -329,7 +342,10 @@
 </main>
 
 <footer class="footer">
-  <p>© <span id="year"></span> Nicolás Hidalgo Salinas</p>
+  <div class="footer-inner">
+    <p>© <span id="year"></span> Nicolás Hidalgo Salinas</p>
+    <a href="#top" class="footer-top"><span data-i18n="footer.top">Volver arriba</span> <span aria-hidden="true">↑</span></a>
+  </div>
 </footer>
 
 <script src="script.js"></script>

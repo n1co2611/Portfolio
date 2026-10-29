@@ -38,6 +38,7 @@ const I18N = {
     "form.send":"Enviar mensaje","form.sending":"Enviando...",
     "form.success":"¡Mensaje enviado! Te responderé pronto.",
     "form.error":"Algo fue mal. Inténtalo de nuevo o escríbeme directamente.",
+    "footer.top":"Volver arriba",
     "contact.eyebrow":"Contacto","contact.title":"Hablemos",
     "contact.subtitle":"Estoy abierto a oportunidades y colaboraciones. Puedes escribirme por cualquiera de estos canales."
   },
@@ -73,6 +74,7 @@ const I18N = {
     "form.send":"Send message","form.sending":"Sending...",
     "form.success":"Message sent! I'll get back to you soon.",
     "form.error":"Something went wrong. Try again or write to me directly.",
+    "footer.top":"Back to top",
     "contact.eyebrow":"Contact","contact.title":"Let's talk",
     "contact.subtitle":"I'm open to opportunities and collaborations. Reach me through any of these channels."
   }

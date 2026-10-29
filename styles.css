@@ -307,7 +307,7 @@ img, svg { display: block; }
 /* ============================================================
    SECTIONS
    ============================================================ */
-.section { padding: 110px 24px; border-top: 1px solid var(--border-sub); }
+.section { padding: 96px 24px; border-top: 1px solid var(--border-sub); }
 .section-inner { max-width: var(--maxw); margin: 0 auto; }
 
 /* ABOUT */
@@ -500,7 +500,12 @@ img, svg { display: block; }
 .contact-card-value { font-size: .92rem; word-break: break-word; }
 
 /* FOOTER */
-.footer { padding: 32px 24px 48px; text-align: center; font-family: var(--font-mono); font-size: .76rem; color: var(--faint); border-top: 1px solid var(--border-sub); }
+.footer { padding: 28px 24px 40px; font-family: var(--font-mono); font-size: .76rem; color: var(--faint); border-top: 1px solid var(--border-sub); }
+.footer-inner { max-width: var(--maxw); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.footer-top { color: var(--muted); transition: color .2s var(--ease); }
+.footer-top span:last-child { display: inline-block; transition: transform .3s var(--ease-spring); }
+.footer-top:hover { color: var(--accent-text); }
+.footer-top:hover span:last-child { transform: translateY(-3px); }
 
 /* ============================================================
    CONTACT — formulario + canales
