@@ -7,15 +7,16 @@
 <meta name="description" content="Portfolio de Nicolás Hidalgo Salinas, desarrollador full stack. Angular, React, Firebase y TypeScript.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2318181b'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='14' font-weight='700' fill='%23fafafa' text-anchor='middle'%3ENH%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1620'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='14' font-weight='800' fill='%23f2a541' text-anchor='middle'%3ENH%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
 <header class="nav" id="nav">
+  <div class="nav-progress" aria-hidden="true"></div>
   <div class="nav-inner">
     <a href="#top" class="nav-logo" aria-label="Inicio">
       <span class="nav-mono">NH</span>
@@ -55,11 +56,14 @@
   <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-inner">
-      <div class="hero-text animate-hero-text">
-        <p class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">Desarrollador Full Stack</p>
-        <h1 class="hero-title">Nicolás<br><span class="hero-title-accent">Hidalgo</span></h1>
-        <p class="hero-tagline" data-i18n="hero.tagline">Construyo aplicaciones web y móviles con Angular, React, Node.js y Firebase, siempre con TypeScript. Mis últimos proyectos son Nido, una PWA para organizar una casa, y CarGest, mi TFG.</p>
-        <div class="hero-actions">
+      <div class="hero-text">
+        <div class="hero-meta hero-step">
+          <p class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">Desarrollador Full Stack</p>
+          <p class="hero-available"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.available">Disponible para incorporación inmediata</span></p>
+        </div>
+        <h1 class="hero-title" aria-label="Nicolás Hidalgo"><span class="hero-word" aria-hidden="true">Nicolás</span><span class="hero-word hero-title-accent" aria-hidden="true">Hidalgo</span></h1>
+        <p class="hero-tagline hero-step" data-i18n="hero.tagline">Construyo aplicaciones web y móviles con Angular, React, Node.js y Firebase, siempre con TypeScript. Mis últimos proyectos son Nido, una PWA para organizar una casa, y CarGest, mi TFG.</p>
+        <div class="hero-actions hero-step">
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">Ver proyectos</a>
           <a href="cv.pdf" download="CV_Nicolas_Hidalgo_Salinas.pdf" class="btn btn-outline btn-cv">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
@@ -67,7 +71,7 @@
           </a>
           <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Contactar</a>
         </div>
-        <div class="hero-socials">
+        <div class="hero-socials hero-step">
           <a href="https://github.com/n1co2611" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.33.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
           </a>
@@ -80,7 +84,7 @@
         </div>
       </div>
 
-      <div class="hero-photo animate-hero-photo">
+      <div class="hero-photo">
         <div class="photo-frame">
           <img src="img/perfil.png" alt="Nicolás Hidalgo">
         </div>

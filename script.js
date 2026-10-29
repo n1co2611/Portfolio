@@ -115,24 +115,65 @@ mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
   burger.setAttribute("aria-expanded", "false");
 }));
 
-// Scroll reveal
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// Hero: parte el nombre en letras para la intro escalonada
+let charIndex = 0;
+document.querySelectorAll(".hero-word").forEach(word => {
+  word.innerHTML = [...word.textContent]
+    .map(c => `<span class="char" style="--i:${charIndex++}">${c}</span>`).join("");
+});
+
+// Scroll: barra de progreso, nombre que se condensa y enlace activo
+const hero = document.querySelector(".hero");
+const heroTitle = document.querySelector(".hero-title");
+const nav = document.getElementById("nav");
+let ticking = false;
+function onScroll() {
+  const y = window.scrollY;
+  const max = document.documentElement.scrollHeight - innerHeight;
+  nav.style.setProperty("--progress-x", max > 0 ? (y / max).toFixed(4) : 0);
+  if (!reduceMotion) {
+    const squeeze = Math.min(Math.max(y / (hero.offsetHeight * .7), 0), 1);
+    heroTitle.style.setProperty("--squeeze", squeeze.toFixed(3));
+  }
+  ticking = false;
+}
+addEventListener("scroll", () => {
+  if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+}, { passive: true });
+onScroll();
+
+const navLinks = [...document.querySelectorAll(".nav-links a")];
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id));
+  });
+}, { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("main section[id]").forEach(s => sectionObserver.observe(s));
+
+// Scroll reveal: los elementos que entran a la vez aparecen en cascada
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      // stagger siblings
-      const siblings = e.target.parentElement.querySelectorAll(".reveal");
-      siblings.forEach((s, idx) => {
-        if (s === e.target) {
-          setTimeout(() => s.classList.add("visible"), 0);
-        }
-      });
-      e.target.classList.add("visible");
-      observer.unobserve(e.target);
-    }
+  entries.filter(e => e.isIntersecting).forEach((e, i) => {
+    e.target.style.setProperty("--stagger", `${i * 90}ms`);
+    e.target.classList.add("visible");
+    observer.unobserve(e.target);
   });
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+document.querySelectorAll(".reveal, .exp-item").forEach(el => observer.observe(el));
+document.querySelectorAll(".hex-item .hex-circle").forEach((c, i) => c.style.setProperty("--i", i));
+
+// Foco de luz que sigue al puntero en tarjetas
+document.querySelectorAll(".project-card, .contact-card").forEach(card => {
+  card.classList.add("spot");
+  card.addEventListener("pointermove", e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${e.clientX - r.left}px`);
+    card.style.setProperty("--my", `${e.clientY - r.top}px`);
+  });
+});
 
 
 // Contact form — Formspree
