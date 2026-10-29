@@ -9,7 +9,7 @@ const I18N = {
   es: {
     "nav.about":"Sobre mí","nav.experience":"Experiencia","nav.projects":"Proyectos","nav.certificates":"Certificados","nav.contact":"Contacto",
     "hero.eyebrow":"Desarrollador Full Stack","hero.available":"Disponible para incorporación inmediata",
-    "hero.tagline":"Construyo aplicaciones web y móviles con Angular, React, Node.js y Firebase, siempre con TypeScript. Mis últimos proyectos son Nido, una PWA para organizar una casa, y CarGest, mi TFG.",
+    "hero.tagline":"Creo aplicaciones web y móviles completas, de la interfaz a la base de datos: apps instalables con datos en tiempo real, inicio de sesión con Google o Face ID, notificaciones push, mapas y estadísticas.",
     "hero.cta_projects":"Ver proyectos","hero.cta_contact":"Contactar","hero.cta_cv":"Descargar CV",
     "contact.cv.label":"Currículum","contact.cv.value":"Descargar CV (PDF)",
     "about.eyebrow":"Perfil","about.title":"Sobre mí",
@@ -45,7 +45,7 @@ const I18N = {
   en: {
     "nav.about":"About","nav.experience":"Experience","nav.projects":"Projects","nav.certificates":"Certificates","nav.contact":"Contact",
     "hero.eyebrow":"Full Stack Developer","hero.available":"Available to start immediately",
-    "hero.tagline":"I build web and mobile apps with Angular, React, Node.js and Firebase, always with TypeScript. My latest projects are Nido, a PWA to run a shared household, and CarGest, my final-year project.",
+    "hero.tagline":"I build complete web and mobile apps, from the interface to the database: installable apps with real-time data, sign-in with Google or Face ID, push notifications, maps and statistics.",
     "hero.cta_projects":"View projects","hero.cta_contact":"Get in touch","hero.cta_cv":"Download CV",
     "contact.cv.label":"Résumé","contact.cv.value":"Download CV (PDF, Spanish)",
     "about.eyebrow":"Profile","about.title":"About me",
