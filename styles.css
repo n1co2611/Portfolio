@@ -229,6 +229,8 @@ img, svg { display: block; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--accent-glow); }
 .btn-outline { border-color: var(--border); color: var(--fg); }
 .btn-outline:hover { background: var(--surface); border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.btn-cv { gap: 8px; }
+.btn-cv svg { width: 16px; height: 16px; flex-shrink: 0; }
 
 .hero-socials { display: flex; gap: 10px; position: relative; z-index: 2; }
 .hero-socials a {
