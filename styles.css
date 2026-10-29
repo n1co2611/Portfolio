@@ -1,6 +1,6 @@
 /* ============================================================
    TOKENS
-   Paleta "Mediterráneo de noche": tinta marina, arena y sol.
+   Paleta del logo: negro con azul #3E85BC.
    ============================================================ */
 :root {
   --font-display: 'Archivo', 'Arial Black', sans-serif;
@@ -13,60 +13,62 @@
   --ease-spring: cubic-bezier(.34,1.4,.64,1);
   --nav-h: 64px;
   --maxw: 1120px;
+  --brand: #3e85bc;
+  --brand-black: #0a0a0a;
 }
 
-/* DARK — azul tinta, no negro */
+/* DARK — negro del logo */
 :root, [data-theme="dark"] {
-  --bg: #0b1620;
-  --bg2: #0e1b27;
-  --surface: #11202d;
-  --surface-hover: #162837;
-  --border: #233646;
-  --border-sub: #172735;
-  --fg: #ece7dc;
-  --muted: #9aa8b3;
-  --faint: #5f707d;
-  --accent: #f2a541;
-  --accent-ink: #1a1206;
-  --accent-dim: rgba(242,165,65,.13);
-  --accent-glow: rgba(242,165,65,.28);
-  --sea: #5cc6b8;
+  --bg: #0a0a0a;
+  --bg2: #0e0e0f;
+  --surface: #121314;
+  --surface-hover: #18191b;
+  --border: #25272a;
+  --border-sub: #18191b;
+  --fg: #ededed;
+  --muted: #9b9ea3;
+  --faint: #5f6368;
+  --accent: #3e85bc;
+  --accent-text: #5c9fd6;
+  --accent-ink: #0a0a0a;
+  --accent-dim: rgba(62,133,188,.14);
+  --accent-glow: rgba(62,133,188,.32);
   --primary: var(--accent);
   --primary-fg: var(--accent-ink);
-  --shadow: 0 24px 60px -24px rgba(0,0,0,.75);
-  --live: #5cc6b8;
-  --live-bg: rgba(92,198,184,.12);
-  --progress: #f2a541;
-  --progress-bg: rgba(242,165,65,.12);
-  --sun: rgba(242,165,65,.20);
-  --tide: rgba(92,198,184,.10);
-  --grid-dot: rgba(236,231,220,.07);
+  --shadow: 0 24px 60px -24px rgba(0,0,0,.85);
+  --live: #5bbf8a;
+  --live-bg: rgba(91,191,138,.12);
+  --progress: #e3a64a;
+  --progress-bg: rgba(227,166,74,.12);
+  --sun: rgba(62,133,188,.22);
+  --tide: rgba(62,133,188,.08);
+  --grid-dot: rgba(237,237,237,.06);
 }
 
-/* LIGHT — niebla marina, no blanco puro */
+/* LIGHT — gris muy claro con el mismo azul, algo más profundo */
 [data-theme="light"] {
-  --bg: #eef1f2;
-  --bg2: #e5eaec;
+  --bg: #f3f4f6;
+  --bg2: #eaecef;
   --surface: #ffffff;
-  --surface-hover: #f6f8f8;
-  --border: #d3dadd;
-  --border-sub: #dfe5e7;
-  --fg: #0b1620;
-  --muted: #4c5a66;
-  --faint: #8b98a1;
-  --accent: #c2410c;
+  --surface-hover: #f8f9fa;
+  --border: #d6d9de;
+  --border-sub: #e3e6ea;
+  --fg: #0a0a0a;
+  --muted: #4f545b;
+  --faint: #8d939a;
+  --accent: #2f6f9f;
+  --accent-text: #2a6592;
   --accent-ink: #ffffff;
-  --accent-dim: rgba(194,65,12,.10);
-  --accent-glow: rgba(194,65,12,.22);
-  --sea: #0f766e;
-  --shadow: 0 24px 60px -28px rgba(11,22,32,.28);
-  --live: #0f766e;
-  --live-bg: rgba(15,118,110,.1);
+  --accent-dim: rgba(47,111,159,.10);
+  --accent-glow: rgba(47,111,159,.24);
+  --shadow: 0 24px 60px -28px rgba(10,10,10,.25);
+  --live: #15803d;
+  --live-bg: rgba(21,128,61,.1);
   --progress: #b45309;
   --progress-bg: rgba(180,83,9,.1);
-  --sun: rgba(242,165,65,.28);
-  --tide: rgba(15,118,110,.08);
-  --grid-dot: rgba(11,22,32,.08);
+  --sun: rgba(62,133,188,.20);
+  --tide: rgba(62,133,188,.08);
+  --grid-dot: rgba(10,10,10,.07);
 }
 
 /* ============================================================
@@ -98,7 +100,7 @@ img, svg { display: block; }
   display: flex; align-items: center; gap: 10px;
   font-family: var(--font-mono); font-size: .74rem; font-weight: 500;
   letter-spacing: .08em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 14px;
+  color: var(--accent-text); margin-bottom: 14px;
 }
 .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
 .section-title {
@@ -123,7 +125,7 @@ img, svg { display: block; }
    HERO — intro orquestada
    ============================================================ */
 .hero-step, .hero-photo { animation: stepIn .9s var(--ease) backwards; }
-.hero-meta    { animation-delay: .05s; }
+.hero-eyebrow { animation-delay: .05s; margin-bottom: 22px; }
 .hero-tagline { animation-delay: .75s; }
 .hero-actions { animation-delay: .87s; }
 .hero-socials { animation-delay: .99s; }
@@ -166,7 +168,8 @@ img, svg { display: block; }
 .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 600; }
 .nav-mono {
   width: 32px; height: 32px; border-radius: var(--radius-sm);
-  background: var(--accent); color: var(--accent-ink);
+  background: var(--brand-black); color: var(--brand);
+  border: 1px solid var(--border);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display); font-stretch: 125%;
   font-size: .72rem; font-weight: 900; letter-spacing: .02em;
@@ -243,24 +246,6 @@ img, svg { display: block; }
   max-width: var(--maxw); margin: 0 auto; width: 100%;
   display: grid; grid-template-columns: 1fr 380px; gap: 56px; align-items: center;
 }
-.hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-bottom: 22px; }
-.hero-eyebrow { margin-bottom: 0; }
-.hero-available {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: .8rem; color: var(--muted);
-  padding: 5px 12px 5px 10px; border: 1px solid var(--border); border-radius: var(--radius-full);
-  background: color-mix(in srgb, var(--surface) 60%, transparent);
-}
-.hero-available .dot {
-  width: 7px; height: 7px; border-radius: 50%; background: var(--live);
-  animation: pulse 2.4s ease-out infinite;
-}
-@keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--live) 55%, transparent); }
-  70%  { box-shadow: 0 0 0 7px transparent; }
-  100% { box-shadow: 0 0 0 0 transparent; }
-}
-
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(3rem, 8.4vw, 6.6rem);
@@ -429,7 +414,7 @@ img, svg { display: block; }
 }
 .exp-item.visible .exp-body::before { transform: scaleY(1); }
 .exp-item.visible .exp-body::after { transform: scale(1); }
-.exp-date { font-family: var(--font-mono); font-size: .8rem; color: var(--accent); padding-top: 3px; }
+.exp-date { font-family: var(--font-mono); font-size: .8rem; color: var(--accent-text); padding-top: 3px; }
 .exp-role { font-family: var(--font-display); font-stretch: 105%; font-size: 1.25rem; font-weight: 700; letter-spacing: -.01em; margin-bottom: 5px; line-height: 1.3; }
 .exp-org { color: var(--fg); opacity: .8; font-size: .95rem; margin-bottom: 12px; }
 .exp-desc { color: var(--muted); margin-bottom: 14px; max-width: 620px; }
