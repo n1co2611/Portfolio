@@ -9,7 +9,7 @@ const I18N = {
   es: {
     "nav.about":"Sobre mí","nav.experience":"Experiencia","nav.projects":"Proyectos","nav.certificates":"Certificados","nav.contact":"Contacto",
     "hero.eyebrow":"Desarrollador Full Stack","hero.available":"Disponible para incorporación inmediata",
-    "hero.tagline":"Convierto ideas en productos digitales completos: los diseño, los desarrollo de la interfaz a la base de datos y los dejo publicados y funcionando.",
+    "hero.tagline":"Convierto ideas en productos digitales completos. Los diseño, los desarrollo de la interfaz a la base de datos y los dejo publicados y funcionando.",
     "hero.cta_projects":"Ver proyectos","hero.cta_contact":"Contactar","hero.cta_cv":"Descargar CV",
     "contact.cv.label":"Currículum","contact.cv.value":"Descargar CV (PDF)",
     "about.eyebrow":"Perfil","about.title":"Sobre mí",
@@ -45,7 +45,7 @@ const I18N = {
   en: {
     "nav.about":"About","nav.experience":"Experience","nav.projects":"Projects","nav.certificates":"Certificates","nav.contact":"Contact",
     "hero.eyebrow":"Full Stack Developer","hero.available":"Available to start immediately",
-    "hero.tagline":"I turn ideas into complete digital products: I design them, build them from the interface to the database, and ship them live and working.",
+    "hero.tagline":"I turn ideas into complete digital products. I design them, build them from the interface to the database, and ship them live and working.",
     "hero.cta_projects":"View projects","hero.cta_contact":"Get in touch","hero.cta_cv":"Download CV",
     "contact.cv.label":"Résumé","contact.cv.value":"Download CV (PDF, Spanish)",
     "about.eyebrow":"Profile","about.title":"About me",
